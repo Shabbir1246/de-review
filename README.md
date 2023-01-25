@@ -2,7 +2,11 @@
 
 These tasks are designed to help you practice your Python and SQL, it should hopefully help you solidify what you've learnt before we move onto Cloud computing next week.
 
-https://dbdiagram.io/d/63d0e842296d97641d7bf89e
+initial DB: https://dbdiagram.io/d/63d0e842296d97641d7bf89e
+
+improved DB: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
+
+
 
 ## The Story
 
