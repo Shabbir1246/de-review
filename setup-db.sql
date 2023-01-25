@@ -9,14 +9,14 @@ CREATE TABLE items (
     item_id SERIAL PRIMARY KEY,
     item_name VARCHAR,
     features VARCHAR[],
-    type VARCHAR
+    department VARCHAR
 );
 
 CREATE TABLE staff (
     staff_id SERIAL PRIMARY KEY,
     first_name VARCHAR,
     last_name VARCHAR,
-    department VARCHAR[]
+    department VARCHAR
 );
 
 CREATE TABLE sales (
@@ -29,23 +29,23 @@ CREATE TABLE sales (
 );
 
 INSERT INTO items
-(item_name, features)
+(item_name, features, department)
 VALUES
-('Louboutin Flip Flops', ARRAY['Footwear', 'Designer']),
-('Eau de Fromage', ARRAY['Fragrance', 'Beauty']),
-('Space Raiders', ARRAY['Grocery']);
+('Louboutin Flip Flops', ARRAY['Designer', 'Faux-Faux-Leather'], 'Footwear'),
+('Eau de Fromage', ARRAY['Fragrance', 'Designer'], 'Beauty'),
+('Space Raiders', ARRAY['Classic'], 'Grocery');
 
 INSERT INTO staff
 (first_name, last_name, department)
 VALUES
-('Duncan', 'Crawley', ARRAY['Beauty', 'Grocery']),
-('Cat', 'Hoang', ARRAY['Designer', 'Footwear']);
+('Duncan', 'Crawley', 'Beauty'),
+('Cat', 'Hoang', 'Footwear');
 
 INSERT INTO sales
 (item_id, salesperson, price, quantity)
 VALUES
-(2, 1, 29.95, 1),
-(1, 1, 14.95, 2);
+(2, 1, 14.95, 2),
+(1, 1, 29.95, 1);
 
 
 SELECT * FROM items;
