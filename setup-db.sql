@@ -1,15 +1,16 @@
 -- WE CREATE FIRST MESSY DB FOR THEM
 
-DROP DATABASE IF EXISTS nc_sells_fridges;
-CREATE DATABASE nc_sells_fridges;
+DROP DATABASE IF EXISTS nc_sells_fridges_draft;
+CREATE DATABASE nc_sells_fridges_draft;
 
-\c nc_sells_fridges
+\c nc_sells_fridges_draft
 
 CREATE TABLE items (
     item_id SERIAL PRIMARY KEY,
     item_name VARCHAR,
     features VARCHAR[],
-    department VARCHAR
+    department VARCHAR,
+    amount_in_stock INT
 );
 
 CREATE TABLE staff (
@@ -29,33 +30,33 @@ CREATE TABLE sales (
 );
 
 INSERT INTO items
-(item_name, features, department)
+(item_name, features, department, amount_in_stock)
 VALUES
-('Louboutin Flip Flops', ARRAY['Designer', 'Faux-Faux-Leather'], 'Footwear'),
-('Eau de Fromage', ARRAY['Fragrance', 'Designer'], 'Beauty'),
-('Space Raiders', ARRAY['Classic'], 'Grocery'),
-('Bags be gone', ARRAY['Roller-Application', 'Multipack'],'Beauty'),
-('Croc Martins',ARRAY['Designer', 'Breezy'],'Footwear'),
-('1up',ARRAY['Restorative'],'Health'),
-('Backpack', ARRAY['Faux-Faux-Leather', 'Multi-coloured','Functional'],'Kids'),
-('Shrek Complete Collection', ARRAY['Classic'],'Movies'),
-('Phillipe Fellope', ARRAY['Unique', 'Designer'],'Footwear'),
-('Faux SheepSkin Rug', ARRAY['Fluffy'],'Home'),
-('Mario Party', ARRAY['Fun-for-all-the-family', 'Friendship-killer'],'Games'),
-('Car seat',ARRAY['Safe'],'Baby'),
-('Bucket of sparks', ARRAY['Rare'],'Tools'),
-('Bath robe', ARRAY['Fluffy'],'Baby'),
-('Drum Kit', ARRAY['Drum-sticks', 'Stool'],'Music'),
-('Guess Who',ARRAY['2-player'],'Games'),
-('A long weight',ARRAY['Variable-weight'],'Sports'),
-('Chain link bracelet',ARRAY['Designer','Mirror-finish'],'Jewelry'),
-('Rattan Furniture', ARRAY['Classic'],'Garden'),
-('Chocolate Fireguard',ARRAY['Functional'],'Home'),
-('Croydon Facelift', ARRAY['Designer', 'DIY kit'],'Beauty'),
-('Rebooks', ARRAY['Straps', 'Designer'],'Footwear'),
-('Unlabelled VHS',ARRAY['Scary', 'Immersive-experience'],'Movies'),
-('Tartan Paint',ARRAY['Rare', 'Unique', 'Designer'],'Tools'),
-('Spirit Level Bubble',ARRAY['Balanced'],'Tools');
+('Louboutin Flip Flops', ARRAY['Designer', 'Faux-Faux-Leather'], 'Footwear', 50),
+('Eau de Fromage', ARRAY['Fragrance', 'Designer'], 'Beauty', 50),
+('Space Raiders', ARRAY['Classic'], 'Grocery', 50),
+('Bags be gone', ARRAY['Roller-Application', 'Multipack'],'Beauty', 50),
+('Croc Martins',ARRAY['Designer', 'Breezy'],'Footwear', 50),
+('1up',ARRAY['Restorative'],'Health', 50),
+('Backpack', ARRAY['Faux-Faux-Leather', 'Multi-coloured','Functional'],'Kids', 50),
+('Shrek Complete Collection', ARRAY['Classic'],'Movies', 50),
+('Phillipe Fellope', ARRAY['Unique', 'Designer'],'Footwear', 50),
+('Faux SheepSkin Rug', ARRAY['Fluffy'],'Home', 50),
+('Mario Party', ARRAY['Fun-for-all-the-family', 'Friendship-killer'],'Games', 50),
+('Car seat',ARRAY['Safe'],'Baby', 50),
+('Bucket of sparks', ARRAY['Rare'],'Tools', 50),
+('Bath robe', ARRAY['Fluffy'],'Baby', 50),
+('Drum Kit', ARRAY['Drum-sticks', 'Stool'],'Music', 50),
+('Guess Who',ARRAY['2-player'],'Games', 50),
+('A long weight',ARRAY['Variable-weight'],'Sports', 50),
+('Chain link bracelet',ARRAY['Designer','Mirror-finish'],'Jewelry', 50),
+('Rattan Furniture', ARRAY['Classic'],'Garden', 50),
+('Chocolate Fireguard',ARRAY['Functional'],'Home', 50),
+('Croydon Facelift', ARRAY['Designer', 'DIY kit'],'Beauty', 50),
+('Rebooks', ARRAY['Straps', 'Designer'],'Footwear', 50),
+('Unlabelled VHS',ARRAY['Scary', 'Immersive-experience'],'Movies', 50),
+('Tartan Paint',ARRAY['Rare', 'Unique', 'Designer'],'Tools', 50),
+('Spirit Level Bubble',ARRAY['Balanced'],'Tools', 50);
 
 
 INSERT INTO staff
@@ -111,3 +112,51 @@ SELECT * FROM items;
 SELECT * FROM staff;
 
 SELECT * FROM sales;
+
+
+DROP DATABASE IF EXISTS nc_sells_fridges;
+CREATE DATABASE nc_sells_fridges;
+
+\c nc_sells_fridges
+
+
+CREATE TABLE dim_features (
+    feature_id SERIAL PRIMARY KEY,
+    feature_name VARCHAR
+);
+
+CREATE TABLE dim_stock (
+    stock_id SERIAL PRIMARY KEY,
+    item_name VARCHAR,
+    amount_in_stock INT
+);
+
+CREATE TABLE stock_feature_junc (
+    stock_feature_id SERIAL PRIMARY KEY,
+    feature_id INT REFERENCES dim_features(feature_id),
+    stock_id INT REFERENCES dim_stock(stock_id)
+);
+
+CREATE TABLE dim_date (
+    date_id TIMESTAMP,
+    day_of_week VARCHAR,
+    month VARCHAR,
+    year INT
+);
+
+CREATE TABLE dim_department (
+    department_id SERIAL PRIMARY KEY,
+    department_name VARCHAR
+);
+
+CREATE TABLE dim_staff (
+    staff_id SERIAL PRIMARY KEY,
+    first_name VARCHAR,
+    last_name VARCHAR,
+    department_id INT REFERENCES dim_department(department_id)
+);
+
+CREATE TABLE fact_sales (
+    sales_id SERIAL PRIMARY KEY,
+    item_id INT REFERENCES dim_stock(stock_id)
+);

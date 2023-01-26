@@ -1,7 +1,3 @@
-# STUDENTS SHOULD QUERY OUR DB FOR DATA AND SAVE IN VARIBALES
+# 1. Using our get_staff() function insert departments into the dim_department table
 
-# DATA SHOULD THEN BE MANIUPULATED IN VARIOUS WAYS TO FIT NEW DB SCHEMA
-# WE WANT TO SEE GOOD TDD FOR THIS
-
-# MANIUPULATED DATA SHOULD THEN BE INSERTED IN CORRECT ORDER
-# DO WE WANT THEM TO FIGURE OUT ORDER OR GIVE THEM THE ORDER?
+# 2. Again using get_staff() insert data into dim_staff table - How will you get the department id?
