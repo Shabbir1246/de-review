@@ -10,7 +10,6 @@ Once you've completed the first two sections you can move onto section 3 and onw
 
 **However keep in mind some of the later tasks will rely on previous tasks being completed - we will signpost this in the README**
 
-
 ## The Task
 
 Northcoders has decided to open up a department store selling all manner of \"unique\" items! However as we've expanded our first attempt at a database has not been as useful as we'd like. We are stuggling to analyse our sales, an important thing to do if we want to bring in the big bucks 💰🤑💰.
@@ -23,15 +22,15 @@ Your job is to use the data taken from the first database and manipulate it to f
 
 > New database: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
 
-
 ---
 
 ## Section 1: Data Manipulation
 
+---
+
 Your first job is to create 6 functions that when given certain data will return formatted data in a manner that can be inserted into the new database tables by the PG8000 module.
 
 Make sure you are clear on what each functions arguments should be and the structure of the data that should be returned.
-
 
 ### Task 1 - Manipulate Department Data
 
@@ -84,7 +83,6 @@ The `format_stock` function should accept a list of dictionaries in the followin
 [['Louboutin Flip Flops', 5], ['Eau de Fromage', 10]]
 ```
 
-
 ### Task 3 - Manipulate Feature Data
 
 The `format_features` function should accept a list of dictionaries in the following format and return a list of lists containing the **feature_name**.
@@ -116,7 +114,7 @@ The `format_features` function should accept a list of dictionaries in the follo
 
 The format_staff function should accept a list of dictionaries representing staff data and a list of dictionaries representing the **new** department data.
 
-It should return a list of lists containing the **first_name**, **last_name**, and the *correct* **department_id**.
+It should return a list of lists containing the **first_name**, **last_name**, and the _correct_ **department_id**.
 
 ```py
 # INPUT
@@ -149,9 +147,10 @@ It should return a list of lists containing the **first_name**, **last_name**, a
 [['Duncan', 'Crawley', 1], ['Cat', 'Hoang', 2]]
 ```
 
-
 ### Task 5 - Manipulate Stock_Feature Data
+
 The `format_stock_feature` function should accept:
+
 - a list representing the newly created stock data
 - a list representing the newly created feature data
 - a list representing the original stock data
@@ -205,7 +204,7 @@ It should return a list of lists that containing **stock_id**, and **feature_id*
 # OUTPUT
 [[1, 1], [1, 2], [2, 1]]
 ```
- 
+
 ### Task 6 - Manipulate Sales Data
 
 The final function, `format_sales`, should accept:
@@ -215,6 +214,7 @@ The final function, `format_sales`, should accept:
 - a list representing the original sales data
 
 It should return a list of lists containing the following:
+
 - item_id - should be the correct ID based on the items name in the items name
 - salesperson - should be the correct ID based on the name of the staff member
 - price
@@ -254,11 +254,15 @@ It should return a list of lists containing the following:
 [[1, 1], [1, 2], [2, 1]]
 ```
 
+---
+
 ## Section 2: Get Postgres Data
+
+---
 
 ### Task 1: Get Initial Data
 
-You will need a way to access all the initial data from each of the three tables. 
+You will need a way to access all the initial data from each of the three tables.
 
 You should write a function (or functions) for this purpose. And the return value of getting the data from a table should be a list of dictionaries. The keys on each dictionary should be the relevant column name for each value in a row.
 
@@ -267,10 +271,14 @@ You should write a function (or functions) for this purpose. And the return valu
 **THE NEXT SECTION RELIES ON SOME DATA BEING INSERTED FIRST - MOVE ONTO THE NEXT SECTION AND COME BACK WHEN YOU HAVE THE DATA YOU NEED INSERTED**
 
 ### Task 2: Get newly inserted data for the following tables:
+
 - `dim_feature`
 - `dim_stock`
 - `dim_department`
 - `dim_staff`
 
+---
 
-## Section 3: Insert Formatted Data 
+## Section 3: Insert Formatted Data
+
+---
