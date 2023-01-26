@@ -26,7 +26,7 @@ Your job is to use the data taken from the first database and manipulate it to f
 
 ---
 
-## Section 1: Manipulation and Insertion
+## Section 1: Data Manipulation
 
 Your first job is to create 6 functions that when given certain data will return formatted data in a manner that can be inserted into the new database tables by the PG8000 module.
 
