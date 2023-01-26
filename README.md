@@ -39,10 +39,23 @@ The `format_departments` function should accept a list of dictionaries in the fo
 
 ```py
 # INPUT
-[{'staff_id': 1, 'first_name': 'Duncan', 'last_name': 'Crawley', 'department': 'Beauty'}, {'staff_id': 2, 'first_name': 'Cat', 'last_name': 'Hoang', 'department': 'Footwear'}, ...]
+[
+    {
+        'staff_id': 1,
+        'first_name': 'Duncan',
+        'last_name': 'Crawley',
+        'department': 'Beauty'
+    },
+    {
+        'staff_id': 2,
+        'first_name': 'Cat',
+        'last_name': 'Hoang',
+        'department': 'Footwear'
+    }
+]
 
 # OUTPUT
-[['Beauty'], ['Footwear'], ...]
+[['Beauty'], ['Footwear']]
 ```
 
 ### Task 2 - Manipulate Stock Data
@@ -51,10 +64,24 @@ The `format_stock` function should accept a list of dictionaries in the followin
 
 ```py
 # INPUT
-[{'item_id': 1, 'item_name': 'Louboutin Flip Flops', 'features': ['Designer', 'Faux-Faux-Leather'], 'department': 'Footwear', 'amount': 5}, {'item_id': 2, 'item_name': 'Eau de Fromage', 'features': ['Fragrance', 'Designer'], 'department': 'Beauty', 'amount': 10}, ...]
+[
+    {
+        'item_id': 1,
+        'item_name': 'Louboutin Flip Flops',
+        'features': ['Designer', 'Faux-Faux-Leather'],
+        'department': 'Footwear',
+        'amount': 5
+    }, {
+        'item_id': 2,
+        'item_name': 'Eau de Fromage',
+        'features': ['Fragrance', 'Designer'],
+        'department': 'Beauty',
+        'amount': 10
+    }
+]
 
 # OUTPUT
-[['Louboutin Flip Flops', 5], ['Eau de Fromage', 10], ...]
+[['Louboutin Flip Flops', 5], ['Eau de Fromage', 10]]
 ```
 
 
@@ -66,10 +93,23 @@ The `format_features` function should accept a list of dictionaries in the follo
 
 ```py
 # INPUT
-[{'item_id': 1, 'item_name': 'Louboutin Flip Flops', 'features': ['Designer', 'Faux-Faux-Leather'], 'department': 'Footwear', 'amount': 5}, {'item_id': 2, 'item_name': 'Eau de Fromage', 'features': ['Fragrance', 'Designer'], 'department': 'Beauty', 'amount': 10}, ...]
+[
+    {
+        'item_id': 1,
+        'item_name': 'Louboutin Flip Flops',
+        'features': ['Designer', 'Faux-Faux-Leather'],
+        'department': 'Footwear', 'amount': 5
+    }, {
+        'item_id': 2,
+        'item_name': 'Eau de Fromage',
+        'features': ['Fragrance', 'Designer'],
+        'department': 'Beauty',
+        'amount': 10
+    }
+]
 
 # OUTPUT
-[['Designer'], ['Faux-Faux-Leather'], ['Fragrance'], ...]
+[['Designer'], ['Faux-Faux-Leather'], ['Fragrance']]
 ```
 
 ### Task 4 - Manipulate Staff Data
@@ -81,9 +121,29 @@ It should return a list of lists containing the **first_name**, **last_name**, a
 ```py
 # INPUT
 # Staff list
-[{'staff_id': 1, 'first_name': 'Duncan', 'last_name': 'Crawley', 'department': 'Beauty'}, {'staff_id': 2, 'first_name': 'Cat', 'last_name': 'Hoang', 'department': 'Footwear'}]
+[
+    {
+        'staff_id': 1,
+        'first_name': 'Duncan',
+        'last_name': 'Crawley',
+        'department': 'Beauty'
+    }, {
+        'staff_id': 2,
+        'first_name': 'Cat',
+        'last_name': 'Hoang',
+        'department': 'Footwear'
+    }
+]
 # Department list
-[{'department_id': 1, 'department_name':'Beauty'}, {'department_id': 2, 'department_name':'Footwear'}]
+[
+    {
+        'department_id': 1,
+        'department_name':'Beauty'
+    }, {
+        'department_id': 2,
+        'department_name':'Footwear'
+    }
+]
 
 # OUTPUT
 [['Duncan', 'Crawley', 1], ['Cat', 'Hoang', 2]]
@@ -104,11 +164,43 @@ It should return a list of lists that containing **stock_id**, and **feature_id*
 # INPUT
 
 # New stock data:
-[{'item_id': 1, 'item_name': 'Louboutin Flip Flops'. 'amount_in_stock':5}, {'item_id': 2, 'item_name': 'Eau de Fromage', 'amount_in_stock': 10}]
+[
+    {
+        'item_id': 1,
+        'item_name': 'Louboutin Flip Flops',
+        'amount_in_stock':5
+    }, {
+        'item_id': 2,
+        'item_name': 'Eau de Fromage',
+        'amount_in_stock': 10
+    }
+]
 # New feature data:
-[{'feature_id':1, 'feature_name':'Designer'},{'feature_id':2, 'feature_name':'Faux-Faux-Leather'}]
+[
+    {
+        'feature_id':1,
+        'feature_name':'Designer'
+    },{
+        'feature_id':2,
+        'feature_name':'Faux-Faux-Leather'
+    }
+]
 # Original stock data
-[{'item_id': 1, 'item_name': 'Louboutin Flip Flops', 'features': ['Designer', 'Faux-Faux-Leather'], 'department': 'Footwear', 'amount': 5}, {'item_id': 2, 'item_name': 'Eau de Fromage', 'features': ['Designer'], 'department': 'Beauty', 'amount': 10}]
+[
+    {
+        'item_id': 1,
+        'item_name': 'Louboutin Flip Flops',
+        'features': ['Designer', 'Faux-Faux-Leather'],
+        'department': 'Footwear',
+        'amount': 5
+    }, {
+        'item_id': 2,
+        'item_name': 'Eau de Fromage',
+        'features': ['Designer'],
+        'department': 'Beauty',
+        'amount': 10
+    }
+]
 
 # OUTPUT
 [[1, 1], [1, 2], [2, 1]]
@@ -132,13 +224,34 @@ It should return a list of lists containing the following:
 ```py
 # INPUT
 # New stock data:
-[{'item_id': 1, 'item_name': 'Louboutin Flip Flops'. 'amount_in_stock':5}, {'item_id': 2, 'item_name': 'Eau de Fromage', 'amount_in_stock': 10}]
+[
+    {
+        'item_id': 1,
+        'item_name': 'Louboutin Flip Flops'.
+        'amount_in_stock':5
+    }, {
+        'item_id': 2,
+        'item_name': 'Eau de Fromage',
+        'amount_in_stock': 10
+    }
+]
 # New staff data:
-[{'staff_id': 1, 'first_name': 'Duncan', 'last_name': 'Crawley', 'department_id': 1}, {'staff_id': 2, 'first_name': 'Cat', 'last_name': 'Hoang', 'department_id': 2}]
+[
+    {
+        'staff_id': 1,
+        'first_name': 'Duncan',
+        'last_name': 'Crawley',
+        'department_id': 1
+    }, {
+        'staff_id': 2,
+        'first_name': 'Cat',
+        'last_name': 'Hoang',
+        'department_id': 2
+    }
+]
 
 # OUTPUT
 [[1, 1], [1, 2], [2, 1]]
-
 ```
 
 ## Section 2: Get Postgres Data
