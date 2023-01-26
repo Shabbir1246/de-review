@@ -18,6 +18,12 @@ NC Department Store - We tried to setup a DB but made a right hash of it
 
 # Section 1: Manipulation and Insertion
 
+
+
+## Task 1 - Insert into Department Table
+
+## Task 2 - Insert into Staff Table
+
 # Section 2: Database Queries
 
 
