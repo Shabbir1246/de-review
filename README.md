@@ -256,4 +256,21 @@ It should return a list of lists containing the following:
 
 ## Section 2: Get Postgres Data
 
+### Task 1: Get Initial Data
+
+You will need a way to access all the initial data from each of the three tables. 
+
+You should write a function (or functions) for this purpose. And the return value of getting the data from a table should be a list of dictionaries. The keys on each dictionary should be the relevant column name for each value in a row.
+
+> You may wish to using a dtat manipulation util function - if so this should be unit tested. However we do not ne to test that the PG8000 module is working.
+
+**THE NEXT SECTION RELIES ON SOME DATA BEING INSERTED FIRST - MOVE ONTO THE NEXT SECTION AND COME BACK WHEN YOU HAVE THE DATA YOU NEED INSERTED**
+
+### Task 2: Get newly inserted data for the following tables:
+- `dim_feature`
+- `dim_stock`
+- `dim_department`
+- `dim_staff`
+
+
 ## Section 3: Insert Formatted Data 
