@@ -2,7 +2,11 @@
 
 ## Introduction
 
-These tasks are designed to help you practice your problem solving with Python and TDD. There is also an element of SQL but this should not be the focus. It should hopefully help you solidify what you've learnt before we move onto Cloud computing next week.
+These tasks are designed to help you practice your problem solving with Python and TDD. There is also an element of SQL but this should not be the focus. It should hopefully help you solidify what you've learnt before we move onto Cloud computing next week. These are the things we will be looking for today:
+
+- Evidence of breaking a problem down
+- TDD
+- How you structure a project
 
 The tasks today are divided into sections, you do not need to finish all the sections and we encourage you to focus on the first.
 
@@ -260,6 +264,15 @@ It should return a list of lists containing the following:
 
 ---
 
+Before starting this section please run the `setup-db.sql` file with the following command:
+
+```sh
+psql -f setup-db.sql
+```
+
+This will create both databases and insert data into the first database ready for the following tasks.
+
+
 ### Task 1: Get Initial Data
 
 You will need a way to access all the initial data from each of the three tables.
@@ -282,3 +295,11 @@ You should write a function (or functions) for this purpose. And the return valu
 ## Section 3: Insert Formatted Data
 
 ---
+
+If you've made it this far well done! 🎉
+
+The final thing to do is to bring together everything you've done so far and populate the new database.
+
+Think about what you need to do and the order that you need to do those things in.
+
+**Remember you may need to do part of the data insertion and then go back to Task 2 of Section 2 to use the new data**

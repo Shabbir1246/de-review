@@ -1,4 +1,4 @@
--- WE CREATE FIRST MESSY DB FOR THEM
+-- CREATE INTITIAL DATABASE
 
 DROP DATABASE IF EXISTS nc_sells_fridges_draft;
 CREATE DATABASE nc_sells_fridges_draft;
@@ -22,8 +22,8 @@ CREATE TABLE staff (
 
 CREATE TABLE sales (
     sales_id SERIAL PRIMARY KEY,
-    item_id INT REFERENCES items(item_id),
-    salesperson INT REFERENCES staff(staff_id),
+    item_name VARCHAR,
+    salesperson VARCHAR,
     price DECIMAL,
     quantity INT,
     created_at TIMESTAMP DEFAULT NOW()
@@ -106,13 +106,7 @@ VALUES
 (2, 10, 57.14, 29),
 (12, 16, 88.44, 5);
 
-
-SELECT * FROM items;
-
-SELECT * FROM staff;
-
-SELECT * FROM sales;
-
+-- CREATE NEW DATABASE
 
 DROP DATABASE IF EXISTS nc_sells_fridges;
 CREATE DATABASE nc_sells_fridges;
@@ -137,13 +131,6 @@ CREATE TABLE stock_feature_junc (
     stock_id INT REFERENCES dim_stock(stock_id)
 );
 
-CREATE TABLE dim_date (
-    date_id TIMESTAMP,
-    day_of_week VARCHAR,
-    month VARCHAR,
-    year INT
-);
-
 CREATE TABLE dim_department (
     department_id SERIAL PRIMARY KEY,
     department_name VARCHAR
@@ -158,5 +145,9 @@ CREATE TABLE dim_staff (
 
 CREATE TABLE fact_sales (
     sales_id SERIAL PRIMARY KEY,
-    item_id INT REFERENCES dim_stock(stock_id)
+    item_id INT REFERENCES dim_stock(stock_id),
+    salesperson INT REFERENCES dim_staff(staff_id),
+    price DECIMAL,
+    quantity INT,
+    created_at TIMESTAMP DEFAULT NOW()
 );
