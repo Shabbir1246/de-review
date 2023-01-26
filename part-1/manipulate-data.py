@@ -1,3 +1,22 @@
-# 1. Using our get_staff() function insert departments into the dim_department table
+def format_departments():
+    pass
 
-# 2. Again using get_staff() insert data into dim_staff table - How will you get the department id?
+
+def format_stock():
+    pass
+
+
+def format_features():
+    pass
+
+
+def format_staff():
+    pass
+
+
+def format_stock_feature():
+    pass
+
+
+def format_sales():
+    pass
