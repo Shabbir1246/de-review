@@ -236,10 +236,6 @@ It should return a list of lists containing the following:
         'item_id': 1,
         'item_name': 'Louboutin Flip Flops'.
         'amount_in_stock':5
-    }, {
-        'item_id': 2,
-        'item_name': 'Eau de Fromage',
-        'amount_in_stock': 10
     }
 ]
 # New staff data:
@@ -249,24 +245,23 @@ It should return a list of lists containing the following:
         'first_name': 'Duncan',
         'last_name': 'Crawley',
         'department_id': 1
-    }, {
-        'staff_id': 2,
-        'first_name': 'Cat',
-        'last_name': 'Hoang',
-        'department_id': 2
     }
 ]
 
 # Original sales data:
 [
-
-
-
-
+    {
+        "sales_id": 1,
+        "item_name": "Louboutin Flip Flops",
+        "salesperson": "Duncan Crawley"
+        "price": 22.49,
+        "quantity": 1,
+        "created_at": "2023-01-03 10:34:56"
+    }
 ]
 
 # OUTPUT
-[[1, 1], [1, 2], [2, 1]]
+[[1, 1, 22.49, 1, "2023-01-03 10:34:56"]]
 ```
 
 
