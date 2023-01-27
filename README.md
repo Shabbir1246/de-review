@@ -14,7 +14,6 @@ These are the things we will be looking for today:
 
 The tasks today are divided into sections, you do not need to finish all the sections and we encourage you to focus on the first.
 
-Once you've completed the first two sections you can move onto section 3 and onwards.
 
 **However keep in mind some of the later tasks will rely on previous tasks being completed - we will signpost this in the README**
 
