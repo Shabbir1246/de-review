@@ -29,13 +29,12 @@ Your job is to use the data taken from the first database and manipulate it to f
 
 > New database: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
 
----
+
 
 ## Section 1: Data Manipulation
 
----
 
-Your first job is to create 6 utility functions that when passed raw data will return formatted data in a manner that can be inserted into the new database tables by the pg8000 module.
+Your first job is to create 6 utility functions that will format the raw data ready to be inserted into the new database tables by the pg8000 module.
 
 Make sure you are clear on what each functions arguments should be and the structure of the data that should be returned.
 
@@ -44,7 +43,7 @@ Make sure you are clear on what each functions arguments should be and the struc
 The `format_departments` function should accept a list of dictionaries in the following format and return a list of lists containing the **department_name**.
 
 ```py
-# INPUT
+# EXAMPLE INPUT
 [
     {
         'staff_id': 1,
@@ -69,7 +68,7 @@ The `format_departments` function should accept a list of dictionaries in the fo
 The `format_stock` function should accept a list of dictionaries in the following format and return a list containing the **item_name** and the **amount**.
 
 ```py
-# INPUT
+# EXAMPLE INPUT
 [
     {
         'item_id': 1,
@@ -97,7 +96,7 @@ The `format_features` function should accept a list of dictionaries in the follo
 > The returned list should only contain unique features!
 
 ```py
-# INPUT
+# EXAMPLE INPUT
 [
     {
         'item_id': 1,
@@ -124,7 +123,7 @@ The format_staff function should accept a list of dictionaries representing staf
 It should return a list of lists containing the **first_name**, **last_name**, and the _correct_ **department_id**.
 
 ```py
-# INPUT
+# EXAMPLE INPUT
 # Staff list
 [
     {
@@ -156,19 +155,19 @@ It should return a list of lists containing the **first_name**, **last_name**, a
 
 ### Task 5 - Manipulate Stock_Feature Data
 
-The `format_stock_feature` function should accept:
+The `format_stock_feature` will need data from the following data structures:
 
--   a list representing the newly created stock data
--   a list representing the newly created feature data
+-   a list representing the newly inserted stock data
+-   a list representing the newly inserted feature data
 -   a list representing the original stock data
+
+_hint: you may want to break this problem down into multiple functions._
 
 It should return a list of lists that containing **stock_id**, and **feature_id**.
 
 > **Keep in mind that each product could have several features and as such there may be multiple of the same `stock_id` each with a different `feature_id`**
 
 ```py
-# INPUT
-
 # New stock data:
 [
     {
@@ -216,9 +215,11 @@ It should return a list of lists that containing **stock_id**, and **feature_id*
 
 The final function, `format_sales`, should accept:
 
--   a list representing the newly created stock data
--   a list representing the newly created staff data
+-   a list representing the newly inserted stock data
+-   a list representing the newly inserted staff data
 -   a list representing the original sales data
+
+_hint: you may want to break this problem down into multiple functions._
 
 It should return a list of lists containing the following:
 
@@ -229,7 +230,6 @@ It should return a list of lists containing the following:
 -   created_at
 
 ```py
-# INPUT
 # New stock data:
 [
     {
@@ -257,15 +257,23 @@ It should return a list of lists containing the following:
     }
 ]
 
+# Original sales data:
+[
+
+
+
+
+]
+
 # OUTPUT
 [[1, 1], [1, 2], [2, 1]]
 ```
 
----
+
 
 ## Section 2: Get Postgres Data
 
----
+
 
 Before starting this section please run the `setup-db.sql` file with the following command:
 
@@ -279,9 +287,9 @@ This will create both databases and insert data into the first database ready fo
 
 You will need a way to access all the initial data from each of the three tables.
 
-You should write a function (or functions) for this purpose. And the return value of getting the data from a table should be a list of dictionaries. The keys on each dictionary should be the relevant column name for each value in a row.
+You should write a function (or functions) for this purpose.  The function should return the data as list of dictionaries where the keys align with the column titles (see the inputs for the functions in section 1).
 
-> You may wish to using a data manipulation util function - if so this should be unit tested. However we do not need to test that the pg8000 module is working.
+> You may wish to use a data manipulation util function - if so this should be unit tested. However we do not need to test that the pg8000 module is working.
 
 **THE NEXT SECTION RELIES ON SOME DATA BEING INSERTED FIRST - MOVE ONTO THE NEXT SECTION AND COME BACK WHEN YOU HAVE THE DATA YOU NEED INSERTED**
 
@@ -292,11 +300,11 @@ You should write a function (or functions) for this purpose. And the return valu
 -   `dim_department`
 -   `dim_staff`
 
----
+
 
 ## Section 3: Insert Formatted Data
 
----
+
 
 If you've made it this far well done! 🎉
 
