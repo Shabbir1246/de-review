@@ -7,6 +7,7 @@ These are the things we will be looking for today:
 
 -   Evidence of breaking a problem down
 -   Good problem solving skills
+-   Sensible project structure
 -   Test Driven Development
 -   Good Git practices
 -   Excellent code standards (PEP8 compliant and well documented)
