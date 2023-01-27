@@ -1,0 +1,94 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "nc_sells_fridges_draft" as user "dcrawley".
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 25
+INSERT 0 17
+INSERT 0 22
+ item_id |         item_name         |                   features                    | department | amount_in_stock 
+---------+---------------------------+-----------------------------------------------+------------+-----------------
+       1 | Louboutin Flip Flops      | {Designer,Faux-Faux-Leather}                  | Footwear   |              50
+       2 | Eau de Fromage            | {Fragrance,Designer}                          | Beauty     |              50
+       3 | Space Raiders             | {Classic}                                     | Grocery    |              50
+       4 | Bags be gone              | {Roller-Application,Multipack}                | Beauty     |              50
+       5 | Croc Martins              | {Designer,Breezy}                             | Footwear   |              50
+       6 | 1up                       | {Restorative}                                 | Health     |              50
+       7 | Backpack                  | {Faux-Faux-Leather,Multi-coloured,Functional} | Kids       |              50
+       8 | Shrek Complete Collection | {Classic}                                     | Movies     |              50
+       9 | Phillipe Fellope          | {Unique,Designer}                             | Footwear   |              50
+      10 | Faux SheepSkin Rug        | {Fluffy}                                      | Home       |              50
+      11 | Mario Party               | {Fun-for-all-the-family,Friendship-killer}    | Games      |              50
+      12 | Car seat                  | {Safe}                                        | Baby       |              50
+      13 | Bucket of sparks          | {Rare}                                        | Tools      |              50
+      14 | Bath robe                 | {Fluffy}                                      | Baby       |              50
+      15 | Drum Kit                  | {Drum-sticks,Stool}                           | Music      |              50
+      16 | Guess Who                 | {2-player}                                    | Games      |              50
+      17 | A long weight             | {Variable-weight}                             | Sports     |              50
+      18 | Chain link bracelet       | {Designer,Mirror-finish}                      | Jewelry    |              50
+      19 | Rattan Furniture          | {Classic}                                     | Garden     |              50
+      20 | Chocolate Fireguard       | {Functional}                                  | Home       |              50
+      21 | Croydon Facelift          | {Designer,"DIY kit"}                          | Beauty     |              50
+      22 | Rebooks                   | {Straps,Designer}                             | Footwear   |              50
+      23 | Unlabelled VHS            | {Scary,Immersive-experience}                  | Movies     |              50
+      24 | Tartan Paint              | {Rare,Unique,Designer}                        | Tools      |              50
+      25 | Spirit Level Bubble       | {Balanced}                                    | Tools      |              50
+(25 rows)
+
+ sales_id |         item_name         |     salesperson     | price | quantity |     created_at      
+----------+---------------------------+---------------------+-------+----------+---------------------
+        1 | Louboutin Flip Flops      | Duncan Crawley      | 14.95 |        2 | 2023-01-08 04:05:06
+        2 | Eau de Fromage            | Duncan Crawley      | 29.95 |        1 | 2023-01-18 05:09:34
+        3 | Space Raiders             | Sutherlan Housbey   | 23.47 |       26 | 2023-01-27 14:10:36
+        4 | Bags be gone              | Vincents Guille     | 43.53 |       19 | 2023-01-07 09:27:43
+        5 | Croc Martins              | Cat Hoang           | 59.08 |       18 | 2023-01-03 10:34:56
+        6 | 1up                       | Lesli Probet        | 94.16 |       30 | 2023-01-14 08:05:23
+        7 | Backpack                  | Cat Hoang           |  9.12 |        6 | 2023-01-27 14:10:36
+        8 | Shrek Complete Collection | Erastus Vaines      | 69.54 |       19 | 2023-01-08 04:05:06
+        9 | Phillipe Fellope          | Marlo Stidworthy    | 82.87 |       11 | 2023-01-27 04:05:06
+       10 | Faux SheepSkin Rug        | Phillipp Zanini     | 15.83 |       14 | 2023-01-03 10:34:56
+       11 | Mario Party               | Kirbee Abrahamovitz | 37.48 |       27 | 2023-01-03 10:34:56
+       12 | Car seat                  | Danika Archell      | 45.12 |       17 | 2023-01-03 10:34:56
+       13 | Bucket of sparks          | Duncan Crawley      | 71.08 |        9 | 2023-01-03 10:34:56
+       14 | Bath robe                 | Christie Whitland   |  2.18 |       25 | 2023-01-27 14:10:36
+       15 | Drum Kit                  | Seline Meekings     | 84.13 |        5 | 2023-01-03 10:34:56
+       16 | Guess Who                 | Ailyn Laxen         | 54.56 |       16 | 2023-01-27 14:10:36
+       17 | A long weight             | Riley Hopkynson     | 82.52 |        4 | 2023-01-03 10:34:56
+       18 | Chain link bracelet       | Anastasie Mordan    | 90.41 |       13 | 2023-01-27 14:10:36
+       19 | Rattan Furniture          | Anastasie Mordan    | 13.44 |       22 | 2023-01-27 14:10:36
+       20 | Chocolate Fireguard       | Stefanie Dartan     | 48.44 |       26 | 2023-01-03 10:34:56
+       21 | Rebooks                   | Tannie Whiteland    | 57.14 |       29 | 2023-01-27 14:10:36
+       22 | Tartan Paint              | Tannie Whiteland    | 88.44 |        5 | 2023-01-03 10:34:56
+(22 rows)
+
+ staff_id | first_name |  last_name   | department 
+----------+------------+--------------+------------
+        1 | Duncan     | Crawley      | Beauty
+        2 | Cat        | Hoang        | Footwear
+        3 | Vincents   | Guille       | Health
+        4 | Marlo      | Stidworthy   | Kids
+        5 | Lesli      | Probet       | Movies
+        6 | Sutherlan  | Housbey      | Footwear
+        7 | Erastus    | Vaines       | Home
+        8 | Phillipp   | Zanini       | Games
+        9 | Kirbee     | Abrahamovitz | Baby
+       10 | Danika     | Archell      | Tools
+       11 | Christie   | Whitland     | Baby
+       12 | Seline     | Meekings     | Music
+       13 | Ailyn      | Laxen        | Games
+       14 | Riley      | Hopkynson    | Sports
+       15 | Anastasie  | Mordan       | Jewelry
+       16 | Stefanie   | Dartan       | Garden
+       17 | Tannie     | Whiteland    | Home
+(17 rows)
+
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "nc_sells_fridges" as user "dcrawley".
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE

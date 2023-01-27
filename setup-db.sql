@@ -81,31 +81,34 @@ VALUES
 ('Tannie', 'Whiteland', 'Home');
 
 INSERT INTO sales
-(item_id, salesperson, price, quantity)
+(item_name, salesperson, price, quantity, created_at)
 VALUES
-(2, 1, 14.95, 2),
-(1, 1, 29.95, 1),
-(15, 6, 23.47, 26),
-(1, 10, 43.53, 19),
-(11, 2, 59.08, 18),
-(10, 7, 94.16, 30),
-(14, 2, 9.12, 6),
-(7, 17, 69.54, 19),
-(6, 14, 82.87, 11),
-(7, 5, 15.83, 14),
-(6, 3, 37.48, 27),
-(10, 16, 45.12, 17),
-(4, 1, 71.08, 9),
-(10, 5, 2.18, 25),
-(12, 3, 84.13, 5),
-(10, 12, 54.56, 16),
-(1, 11, 82.52, 4),
-(4, 3, 90.41, 13),
-(11, 3, 13.44, 22),
-(12, 9, 48.44, 26),
-(2, 10, 57.14, 29),
-(12, 16, 88.44, 5);
+('Louboutin Flip Flops', 'Duncan Crawley', 14.95, 2, '2023-01-08 04:05:06'),
+('Eau de Fromage', 'Duncan Crawley', 29.95, 1, '2023-01-18 05:09:34'),
+('Space Raiders', 'Sutherlan Housbey', 23.47, 26, '2023-01-27 14:10:36'),
+('Bags be gone', 'Vincents Guille', 43.53, 19, '2023-01-07 09:27:43'),
+('Croc Martins', 'Cat Hoang', 59.08, 18, '2023-01-03 10:34:56'),
+('1up', 'Lesli Probet', 94.16, 30, '2023-01-14 08:05:23'),
+('Backpack', 'Cat Hoang', 9.12, 6, '2023-01-27 14:10:36'),
+('Shrek Complete Collection', 'Erastus Vaines', 69.54, 19, '2023-01-08 04:05:06'),
+('Phillipe Fellope', 'Marlo Stidworthy', 82.87, 11, '2023-01-27 04:05:06'),
+('Faux SheepSkin Rug', 'Phillipp Zanini', 15.83, 14,'2023-01-03 10:34:56'),
+('Mario Party', 'Kirbee Abrahamovitz', 37.48, 27, '2023-01-03 10:34:56'),
+('Car seat', 'Danika Archell', 45.12, 17, '2023-01-03 10:34:56'),
+('Bucket of sparks', 'Duncan Crawley', 71.08, 9, '2023-01-03 10:34:56'),
+('Bath robe', 'Christie Whitland', 2.18, 25, '2023-01-27 14:10:36'),
+('Drum Kit', 'Seline Meekings', 84.13, 5, '2023-01-03 10:34:56'),
+('Guess Who', 'Ailyn Laxen', 54.56, 16, '2023-01-27 14:10:36'),
+('A long weight', 'Riley Hopkynson', 82.52, 4, '2023-01-03 10:34:56'),
+('Chain link bracelet', 'Anastasie Mordan', 90.41, 13, '2023-01-27 14:10:36'),
+('Rattan Furniture', 'Anastasie Mordan', 13.44, 22, '2023-01-27 14:10:36'),
+('Chocolate Fireguard', 'Stefanie Dartan', 48.44, 26, '2023-01-03 10:34:56'),
+('Rebooks', 'Tannie Whiteland', 57.14, 29, '2023-01-27 14:10:36'),
+('Tartan Paint', 'Tannie Whiteland', 88.44, 5, '2023-01-03 10:34:56');
 
+SELECT * FROM items;
+SELECT * FROM sales;
+SELECT * FROM staff;
 -- CREATE NEW DATABASE
 
 DROP DATABASE IF EXISTS nc_sells_fridges;
