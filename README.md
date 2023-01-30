@@ -19,7 +19,7 @@ The tasks today are divided into sections, you do not need to finish all the sec
 
 ## The Task
 
-Northcoders has decided to open up a department store selling all manner of \"unique\" items! However as we've expanded our first attempt at a database has not been as useful as we'd like. We are struggling to analyse our sales, an important thing to do if we want to bring in the big bucks 💰🤑💰.
+Northcoders has decided to open up a department store selling all manner of \"unique\" items! However as we've expanded our business the first attempt at a database has not been as useful as we'd like. We are struggling to analyse our sales, an important thing to do if we want to bring in the big bucks 💰🤑💰.
 
 We have hired a professional to design our new database which should mean we are able to identify the best sellers and what isn't worth stocking.
 
@@ -29,12 +29,12 @@ Your job is to use the data taken from the first database and manipulate it to f
 
 > New database: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
 
-
+**You will not need to interact with the databases until Section 2**
 
 ## Section 1: Data Manipulation
 
 
-Your first job is to create 6 utility functions that will format the raw data ready to be inserted into the new database tables by the pg8000 module.
+Your first job is to create 6 utility functions that will format the raw data ready to be inserted into the new database tables.
 
 Make sure you are clear on what each functions arguments should be and the structure of the data that should be returned.
 
@@ -65,23 +65,21 @@ The `format_departments` function should accept a list of dictionaries in the fo
 
 ### Task 2 - Manipulate Stock Data
 
-The `format_stock` function should accept a list of dictionaries in the following format and return a list containing the **item_name** and the **amount**.
+The `format_stock` function should accept a list of dictionaries in the following format and return a list containing the **item_name** and the **amount_in_stock**.
 
 ```py
 # EXAMPLE INPUT
 [
     {
-        'item_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'features': ['Designer', 'Faux-Faux-Leather'],
         'department': 'Footwear',
-        'amount': 5
+        'amount_in_stock': 5
     }, {
-        'item_id': 2,
         'item_name': 'Eau de Fromage',
         'features': ['Fragrance', 'Designer'],
         'department': 'Beauty',
-        'amount': 10
+        'amount_in_stock': 10
     }
 ]
 
@@ -99,16 +97,15 @@ The `format_features` function should accept a list of dictionaries in the follo
 # EXAMPLE INPUT
 [
     {
-        'item_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'features': ['Designer', 'Faux-Faux-Leather'],
-        'department': 'Footwear', 'amount': 5
+        'department': 'Footwear', 'amount': 5,
+        'amount_in_stock': 5
     }, {
-        'item_id': 2,
         'item_name': 'Eau de Fromage',
         'features': ['Fragrance', 'Designer'],
         'department': 'Beauty',
-        'amount': 10
+        'amount_in_stock': 10
     }
 ]
 
@@ -193,17 +190,15 @@ It should return a list of lists that containing **stock_id**, and **feature_id*
 # Original stock data
 [
     {
-        'item_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'features': ['Designer', 'Faux-Faux-Leather'],
         'department': 'Footwear',
-        'amount': 5
+        'amount_in_stock': 5
     }, {
-        'item_id': 2,
         'item_name': 'Eau de Fromage',
         'features': ['Designer'],
         'department': 'Beauty',
-        'amount': 10
+        'amount_in_stock': 10
     }
 ]
 
@@ -251,17 +246,17 @@ It should return a list of lists containing the following:
 # Original sales data:
 [
     {
-        "sales_id": 1,
-        "item_name": "Louboutin Flip Flops",
-        "salesperson": "Duncan Crawley"
-        "price": 22.49,
-        "quantity": 1,
-        "created_at": "2023-01-03 10:34:56"
+        'sale_code': 'guiiljnevn',
+        'item_name': 'Louboutin Flip Flops',
+        'salesperson': 'Duncan Crawley'
+        'price': 22.49,
+        'quantity': 1,
+        'created_at': '2023-01-03 10:34:56'
     }
 ]
 
 # OUTPUT
-[[1, 1, 22.49, 1, "2023-01-03 10:34:56"]]
+[[1, 1, 22.49, 1, '2023-01-03 10:34:56']]
 ```
 
 
@@ -299,7 +294,7 @@ You should write a function (or functions) for this purpose.  The function shoul
 
 ## Section 3: Insert Formatted Data
 
-
+**Assuming you have run the provided `setup-db` sql file the new database will be created for you and is ready for data insertion!**
 
 If you've made it this far well done! 🎉
 
