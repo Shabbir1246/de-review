@@ -99,7 +99,7 @@ The `format_features` function should accept a list of dictionaries in the follo
     {
         'item_name': 'Louboutin Flip Flops',
         'features': ['Designer', 'Faux-Faux-Leather'],
-        'department': 'Footwear', 'amount': 5,
+        'department': 'Footwear',
         'amount_in_stock': 5
     }, {
         'item_name': 'Eau de Fromage',
