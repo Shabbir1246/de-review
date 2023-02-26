@@ -229,7 +229,7 @@ It should return a list of lists containing the following:
 [
     {
         'item_id': 1,
-        'item_name': 'Louboutin Flip Flops'.
+        'item_name': 'Louboutin Flip Flops',
         'amount_in_stock':5
     }
 ]
