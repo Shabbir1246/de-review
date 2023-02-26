@@ -248,7 +248,7 @@ It should return a list of lists containing the following:
     {
         'sale_code': 'guiiljnevn',
         'item_name': 'Louboutin Flip Flops',
-        'salesperson': 'Duncan Crawley'
+        'salesperson': 'Duncan Crawley',
         'price': 22.49,
         'quantity': 1,
         'created_at': '2023-01-03 10:34:56'
