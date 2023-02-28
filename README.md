@@ -168,11 +168,11 @@ It should return a list of lists that containing **stock_id**, and **feature_id*
 # New stock data:
 [
     {
-        'item_id': 1,
+        'stock_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'amount_in_stock':5
     }, {
-        'item_id': 2,
+        'stock_id': 2,
         'item_name': 'Eau de Fromage',
         'amount_in_stock': 10
     }
@@ -228,7 +228,7 @@ It should return a list of lists containing the following:
 # New stock data:
 [
     {
-        'item_id': 1,
+        'stock_id': 1,
         'item_name': 'Louboutin Flip Flops',
         'amount_in_stock':5
     }
