@@ -126,8 +126,8 @@ CREATE TABLE dim_stock (
 
 CREATE TABLE stock_feature_junc (
     stock_feature_id SERIAL PRIMARY KEY,
-    feature_id INT REFERENCES dim_features(feature_id),
-    stock_id INT REFERENCES dim_stock(stock_id)
+    stock_id INT REFERENCES dim_stock(stock_id),
+    feature_id INT REFERENCES dim_features(feature_id)
 );
 
 CREATE TABLE dim_department (
