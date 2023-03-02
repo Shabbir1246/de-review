@@ -281,7 +281,7 @@ You should write a function (or functions) for this purpose.  The function shoul
 
 > You may wish to use a data manipulation util function - if so this should be unit tested. However we do not need to test that the pg8000 module is working.
 
-**THE NEXT SECTION RELIES ON SOME DATA BEING INSERTED FIRST - MOVE ONTO THE NEXT SECTION AND COME BACK WHEN YOU HAVE THE DATA YOU NEED INSERTED**
+**THE NEXT TASK RELIES ON SOME DATA BEING INSERTED FIRST - MOVE ONTO THE NEXT SECTION AND COME BACK WHEN YOU HAVE THE DATA YOU NEED INSERTED**
 
 ### Task 2: Get newly inserted data for the following tables:
 
