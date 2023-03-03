@@ -25,11 +25,12 @@ We have hired a professional to design our new database which should mean we are
 
 Your job is to use the data taken from the first database and manipulate it to fit the schema set out in the second database. The schemas for both databases can be found below:
 
-> First database: https://dbdiagram.io/d/63d0e842296d97641d7bf89e
+> Original database: https://dbdiagram.io/d/63d0e842296d97641d7bf89e
 
 > New database: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
 
-**You will not need to interact with the databases until Section 2**
+The project is broken down into three main sections. Please take a look at the following diagram to see how the functions we want you to build in each section fits into project.
+![project diagram](project-diagram.png)
 
 ## Section 1: Data Manipulation
 
