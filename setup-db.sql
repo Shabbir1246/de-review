@@ -1,9 +1,9 @@
 -- CREATE INTITIAL DATABASE
 
-DROP DATABASE IF EXISTS nc_sells_fridges_draft;
-CREATE DATABASE nc_sells_fridges_draft;
+DROP DATABASE IF EXISTS nc_sells_fridges_og;
+CREATE DATABASE nc_sells_fridges_og;
 
-\c nc_sells_fridges_draft
+\c nc_sells_fridges_og
 
 CREATE TABLE items (
     item_name VARCHAR PRIMARY KEY,
@@ -107,10 +107,10 @@ VALUES
 
 -- CREATE NEW DATABASE
 
-DROP DATABASE IF EXISTS nc_sells_fridges;
-CREATE DATABASE nc_sells_fridges;
+DROP DATABASE IF EXISTS nc_sells_fridges_new;
+CREATE DATABASE nc_sells_fridges_new;
 
-\c nc_sells_fridges
+\c nc_sells_fridges_new
 
 
 CREATE TABLE dim_features (
