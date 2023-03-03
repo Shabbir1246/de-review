@@ -29,8 +29,11 @@ Your job is to use the data taken from the first database and manipulate it to f
 
 > New database: https://dbdiagram.io/d/63d1184e296d97641d7c05d0
 
-The project is broken down into three main sections. Please take a look at the following diagram to see how the functions we want you to build in each section fits into project.
-![project diagram](project-diagram.png)
+The project is broken down into three main sections. Please take a look at the following diagram to see how the functions we want you to build fits into the project as a whole.
+
+<div align="center">
+    <img src="project-diagram.png" width="50%">
+</div>  
 
 ## Section 1: Data Manipulation
 
