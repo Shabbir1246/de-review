@@ -61,7 +61,7 @@ VALUES
 INSERT INTO staff
 (first_name, last_name, department)
 VALUES
-('Duncan', 'Crawley', 'Beauty'),
+('Danika', 'Crawley', 'Beauty'),
 ('Cat', 'Hoang', 'Footwear'),
 ('Vincents', 'Guille', 'Health'),
 ('Marlo', 'Stidworthy', 'Kids'),
@@ -82,8 +82,8 @@ VALUES
 INSERT INTO sales
 (sale_code, item_name, salesperson, price, quantity, created_at)
 VALUES
-('guiiljnevn', 'Louboutin Flip Flops', 'Duncan Crawley', 14.95, 2, '2023-01-08 04:05:06'),
-('48yv929f0w', 'Eau de Fromage', 'Duncan Crawley', 29.95, 1, '2023-01-18 05:09:34'),
+('guiiljnevn', 'Louboutin Flip Flops', 'Danika Crawley', 14.95, 2, '2023-01-08 04:05:06'),
+('48yv929f0w', 'Eau de Fromage', 'Danika Crawley', 29.95, 1, '2023-01-18 05:09:34'),
 ('4opsvio2to', 'Space Raiders', 'Sutherlan Housbey', 23.47, 26, '2023-01-27 14:10:36'),
 ('tvazcdxoup', 'Bags be gone', 'Vincents Guille', 43.53, 19, '2023-01-07 09:27:43'),
 ('5w7nzlxgy8', 'Croc Martins', 'Cat Hoang', 59.08, 18, '2023-01-03 10:34:56'),
@@ -94,7 +94,7 @@ VALUES
 ('jajw3w6c0s', 'Faux SheepSkin Rug', 'Phillipp Zanini', 15.83, 14,'2023-01-03 10:34:56'),
 ('tripa7kcsr', 'Mario Party', 'Kirbee Abrahamovitz', 37.48, 27, '2023-01-03 10:34:56'),
 ('9wihbmw8s5', 'Car seat', 'Danika Archell', 45.12, 17, '2023-01-03 10:34:56'),
-('cjzkxoqkkh', 'Bucket of sparks', 'Duncan Crawley', 71.08, 9, '2023-01-03 10:34:56'),
+('cjzkxoqkkh', 'Bucket of sparks', 'Danika Crawley', 71.08, 9, '2023-01-03 10:34:56'),
 ('xj9jqf09v6', 'Bath robe', 'Christie Whitland', 2.18, 25, '2023-01-27 14:10:36'),
 ('kf949ghsn8', 'Drum Kit', 'Seline Meekings', 84.13, 5, '2023-01-03 10:34:56'),
 ('jlbokqyw4k', 'Guess Who', 'Ailyn Laxen', 54.56, 16, '2023-01-27 14:10:36'),

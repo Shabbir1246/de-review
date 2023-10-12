@@ -51,7 +51,7 @@ The `format_departments` function should accept a list of dictionaries in the fo
 [
     {
         'staff_id': 1,
-        'first_name': 'Duncan',
+        'first_name': 'Danika',
         'last_name': 'Crawley',
         'department': 'Beauty'
     },
@@ -129,7 +129,7 @@ It should return a list of lists containing the **first_name**, **last_name**, a
 [
     {
         'staff_id': 1,
-        'first_name': 'Duncan',
+        'first_name': 'Danika',
         'last_name': 'Crawley',
         'department': 'Beauty'
     }, {
@@ -151,7 +151,7 @@ It should return a list of lists containing the **first_name**, **last_name**, a
 ]
 
 # OUTPUT
-[['Duncan', 'Crawley', 1], ['Cat', 'Hoang', 2]]
+[['Danika', 'Crawley', 1], ['Cat', 'Hoang', 2]]
 ```
 
 ### Task 5 - Manipulate Stock_Feature Data
@@ -241,7 +241,7 @@ It should return a list of lists containing the following:
 [
     {
         'staff_id': 1,
-        'first_name': 'Duncan',
+        'first_name': 'Danika',
         'last_name': 'Crawley',
         'department_id': 1
     }
@@ -252,7 +252,7 @@ It should return a list of lists containing the following:
     {
         'sale_code': 'guiiljnevn',
         'item_name': 'Louboutin Flip Flops',
-        'salesperson': 'Duncan Crawley',
+        'salesperson': 'Danika Crawley',
         'price': 22.49,
         'quantity': 1,
         'created_at': '2023-01-03 10:34:56'
