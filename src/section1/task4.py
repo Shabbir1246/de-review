@@ -5,7 +5,8 @@ def format_staff(staff_dict, dept_dict):
         return new_staff_list
     
     # fill list of list with fore_name, last_name and department name before replacing dept name with dept id
-    new_staff_list = [[staff['first_name'], staff['last_name'], staff['department']] for staff in staff_dict]
+    new_staff_list = [[staff['first_name'], staff['last_name'], staff['department']] 
+                      for staff in staff_dict]
     
     # replace department name by department id
     for i in range(len(new_staff_list)):
@@ -18,6 +19,7 @@ def format_staff(staff_dict, dept_dict):
         
         # The lambda function returns a single element list holding department id
         dept_id = get_dept_id(depart_name, dept_dict)
+
         # now replace dept name with dept id
         new_staff_list[i][2] = dept_id[0] if dept_id else None
 
