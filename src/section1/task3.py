@@ -1,5 +1,4 @@
 def format_features(stock_dict):
-
     # using list comprehension loop on list to find individual stock item 
     # and then loop again on features key to seperate out individual features
     features_list = [[feature] for stock_item in stock_dict for feature in stock_item.get('features', '')]
