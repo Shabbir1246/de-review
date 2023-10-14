@@ -64,7 +64,7 @@ def test_should_take_a_list_of_dicts_and_return_a_list_of_lists_each_containing_
         assert len(feature) < 2
     
     # list of list is made up of unique features from each stock item features
-    assert output4 ==  [['Faux-Faux-Leather'], ['Fragrance'], ['Designer']]
+    assert output4 ==  [['Designer'], ['Faux-Faux-Leather'], ['Fragrance']]
 
     # original list of dictionaries is not mutated
     assert input_list[0] == {'item_name': 'Louboutin Flip Flops',

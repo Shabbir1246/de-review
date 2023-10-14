@@ -7,4 +7,6 @@ def format_features(stock_dict):
     else:
         # remove any repeate feature in the list of lists of features 
         unique_features_list = [features_list[i] for i in range(len(features_list)) if features_list[i] not in features_list[i + 1:]]
+        #  lets returned a sorted list
+        unique_features_list.sort()
         return unique_features_list
