@@ -94,7 +94,14 @@ def test_should_not_mutate_original_list_of_dictionaries():
                 'first_name': 'Cat',
                 'last_name': 'Hoang',
                 'department': 'Footwear'}]
+    depart_list = [
+            {'department_id': 1,
+            'department_name':'Beauty'}, 
+            {'department_id': 2,
+            'department_name':'Footwear'}]
     
+    new_staff_lst5 = format_staff(staff_list, depart_list)
+
     assert staff_list[0] == {'staff_id': 1,
                 'first_name': 'Danika',
                 'last_name': 'Crawley',
@@ -104,12 +111,6 @@ def test_should_not_mutate_original_list_of_dictionaries():
                 'last_name': 'Hoang',
                 'department': 'Footwear'}
 
-    depart_list = [
-            {'department_id': 1,
-            'department_name':'Beauty'}, 
-            {'department_id': 2,
-            'department_name':'Footwear'}]
-    
     assert depart_list[0] == {'department_id': 1,
             'department_name':'Beauty'}
     assert depart_list[1] == {'department_id': 2,

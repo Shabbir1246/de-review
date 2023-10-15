@@ -4,7 +4,8 @@ def format_staff(staff_dict, dept_dict):
     if not staff_dict or not dept_dict:
         return new_staff_list
     
-    # fill list of list with fore_name, last_name and department name before replacing dept name with dept id
+    # fill list of list with fore_name, last_name and department name 
+    # before replacing dept name with dept id
     new_staff_list = [[staff['first_name'], staff['last_name'], staff['department']] 
                       for staff in staff_dict]
     
