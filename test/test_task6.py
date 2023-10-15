@@ -59,8 +59,20 @@ def test_format_sales_func_should_return_None_when_supplied_a_list_with_missing_
     assert format_sales(new_stock_data, new_staff_data, [test_corrupted_sale_item]) == [[None, None, 59.08, 18, '2023-01-03 10:34:56']]
 
 def test_format_sales_func_should_return_a_correctly_formatted_list_of_lists_of_stock_id_staff_id_price_quantity_created_at():
-     output = format_sales(new_stock_data, new_staff_data, orig_sales_data) 
+    
+    output = format_sales(new_stock_data, new_staff_data, orig_sales_data) 
     #  print(output)
-     expected = [[1, 1, 14.95, 2, '2023-01-08 04:05:06'], [2, 1, 29.95, 1, '2023-01-18 05:09:34'], [3, 6, 23.47, 26, '2023-01-27 14:10:36'], [4, 3, 43.53, 19, '2023-01-07 09:27:43'], [5, 2, 59.08, 18, '2023-01-03 10:34:56']]
+    expected = [[1, 1, 14.95, 2, '2023-01-08 04:05:06'], 
+                 [2, 1, 29.95, 1, '2023-01-18 05:09:34'], 
+                 [3, 6, 23.47, 26, '2023-01-27 14:10:36'], 
+                 [4, 3, 43.53, 19, '2023-01-07 09:27:43'], 
+                 [5, 2, 59.08, 18, '2023-01-03 10:34:56']]
 
-     assert output == expected
+    assert output == expected
+
+def test_format_sales_func_should_not_have_mutated_original_data_arguments_supplied():
+
+    output = format_sales(new_stock_data, new_staff_data, orig_sales_data) 
+    assert new_stock_data[0] == {'stock_id': 1, 'item_name': 'Louboutin Flip Flops', 'amount_in_stock':  50}
+    assert new_staff_data[0] == {'staff_id': 1, 'first_name': 'Danika', 'last_name': 'Crawley'}
+    assert orig_sales_data[0] == {'sales_code': 'guiiljnevn', 'item_name': 'Louboutin Flip Flops', 'salesperson': 'Danika Crawley', 'price':  14.95,'quantity':  2,'created_at': '2023-01-08 04:05:06'}
